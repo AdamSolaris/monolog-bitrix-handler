@@ -1,0 +1,24 @@
+{
+    "name": "adamsolaris/monolog-bitrix-handler",
+    "description": "Monolog handler for sending logs to Bitrix24 via webhooks",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Solaris",
+            "email": "adam@solaris.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "monolog/monolog": "^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5 || ^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdamSolaris\\MonologBitrixHandler\\": "src/"
+        }
+    }
+}
