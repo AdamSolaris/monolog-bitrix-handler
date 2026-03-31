@@ -23,8 +23,8 @@ services:
             $webhook: '%env(BITRIX_WEBHOOK)%'
             $dialogId: '%env(BITRIX_DIALOG_ID)%'
             $level: 'error' # Optional, default is 'debug'
-            $splitLongMessages: true # Optional: split message if it's too long
-            $delayBetweenMessages: true # Optional: add 1-second delay between split messages
+            $splitLongMessages: true # Optional: split message if it's too long, default  is 'false'
+            $delayBetweenMessages: true # Optional: add 1-second delay between split messages, default  is 'false'
 ```
 
 In your `monolog.yaml`:
@@ -52,7 +52,7 @@ BITRIX_DIALOG_ID=chat123
 
 - Supports PHP 7.4+
 - Compatible with Monolog 2.x and 3.x
-- **Message Truncation/Splitting**: Handles long messages (max 4000 characters) to comply with Bitrix24 API limits.
+- **Message Truncation/Splitting**: Handles long messages (max 5000 characters) to comply with Bitrix24 API limits.
 - **Rate Limit Protection**: Optional 1-second delay between sending split messages.
 - **Custom Formatting**: Uses standard Monolog formatters.
 - Uses native `curl` to avoid extra dependencies.
